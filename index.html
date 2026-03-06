@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santos FC</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f0f0f;
+color:white;
+transition:0.3s;
+}
+
+header{
+background:black;
+padding:25px;
+text-align:center;
+border-bottom:3px solid white;
+}
+
+nav{
+background:#1b1b1b;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ccc;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+.card{
+background:#1c1c1c;
+padding:25px;
+border-radius:10px;
+margin-top:20px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+h2{
+border-left:5px solid white;
+padding-left:10px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+background:white;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+margin-top:10px;
+}
+
+button:hover{
+background:#ddd;
+}
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.light{
+background:#f2f2f2;
+color:black;
+}
+
+.light .card{
+background:white;
+}
+
+.light nav{
+background:#ddd;
+}
+
+.light header{
+background:#eee;
+border-bottom:3px solid black;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Santos Futebol Clube ⚽</h1>
+<p>História, ídolos e curiosidades do Peixe</p>
+<button onclick="modo()">Alternar Tema</button>
+</header>
+
+<nav>
+<a href="#historia">História</a>
+<a href="#idolos">Ídolos</a>
+<a href="#titulos">Títulos</a>
+<a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<section id="historia">
+
+<h2>História</h2>
+
+<div class="card">
+<p>
+Fundado em 1912 na cidade de Santos, o Santos Futebol Clube é um dos clubes
+mais importantes da história do futebol mundial.
+</p>
+
+<p>
+O clube ficou conhecido mundialmente principalmente durante a era de Pelé,
+quando conquistou títulos internacionais e encantou o mundo com seu futebol ofensivo.
+</p>
+
+<p>
+Até hoje o Santos é conhecido por revelar grandes talentos do futebol brasileiro.
+</p>
+</div>
+
+</section>
+
+<section id="idolos">
+
+<h2>Ídolos do Santos</h2>
+
+<div class="card">
+
+<ul>
+<li>Pelé</li>
+<li>Neymar Jr</li>
+<li>Pepe</li>
+<li>Robinho</li>
+<li>Giovanni</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="titulos">
+
+<h2>Principais Títulos</h2>
+
+<div class="card">
+
+<ul>
+<li>3x Copa Libertadores</li>
+<li>2x Mundial Interclubes</li>
+<li>8x Campeonato Brasileiro</li>
+<li>22x Campeonato Paulista</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="curiosidades">
+
+<h2>Curiosidades</h2>
+
+<div class="card">
+
+<p id="texto">
+Clique no botão para ver uma curiosidade sobre o Santos.
+</p>
+
+<button onclick="curiosidade()">Mostrar curiosidade</button>
+
+</div>
+
+</section>
+
+<footer>
+<p>Site sobre o Santos FC 🐟</p>
+</footer>
+
+<script>
+
+function modo(){
+document.body.classList.toggle("light");
+}
+
+const curiosidades = [
+
+"O Santos revelou um dos maiores jogadores da história do futebol: Pelé.",
+
+"Neymar começou sua carreira profissional no Santos antes de ir para a Europa.",
+
+"O Santos ganhou a Libertadores de 2011 com Neymar como destaque.",
+
+"A Vila Belmiro é um dos estádios mais tradicionais do Brasil.",
+
+"O Santos ficou famoso mundialmente nos anos 60 com o time de Pelé."
+
+];
+
+function curiosidade(){
+
+let numero = Math.floor(Math.random() * curiosidades.length);
+
+document.getElementById("texto").innerText = curiosidades[numero];
+
+}
+
+</script>
+
+</body>
+</html>
